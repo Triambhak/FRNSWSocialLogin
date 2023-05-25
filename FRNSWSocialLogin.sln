@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FRNSWSocialLogin", "FRNSWSocialLogin\FRNSWSocialLogin.csproj", "{F66D9569-C3BF-4E12-859A-5640DE800C03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleLogin", "GoogleLogin\GoogleLogin.csproj", "{647A5246-BCC7-4261-910F-53FBEC95BF30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F66D9569-C3BF-4E12-859A-5640DE800C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66D9569-C3BF-4E12-859A-5640DE800C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66D9569-C3BF-4E12-859A-5640DE800C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66D9569-C3BF-4E12-859A-5640DE800C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647A5246-BCC7-4261-910F-53FBEC95BF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647A5246-BCC7-4261-910F-53FBEC95BF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647A5246-BCC7-4261-910F-53FBEC95BF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647A5246-BCC7-4261-910F-53FBEC95BF30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9C10F19-FFE0-4EFA-B366-92D6E0D83359}
+	EndGlobalSection
+EndGlobal
