@@ -21,14 +21,14 @@ builder.Services.AddAuthentication()
        config.GetSection("Authentication:Google");
        options.ClientId = googleAuthNSection["ClientId"];
        options.ClientSecret = googleAuthNSection["ClientSecret"];
-   })
-   .AddFacebook(options =>
-   {
-       IConfigurationSection FBAuthNSection =
-       config.GetSection("Authentication:FB");
-       options.AppId = FBAuthNSection["AppId"];
-       options.AppSecret = FBAuthNSection["AppSecret"];
    });
+   //.AddFacebook(options =>
+   //{
+   //    IConfigurationSection FBAuthNSection =
+   //    config.GetSection("Authentication:FB");
+   //    options.AppId = FBAuthNSection["AppId"];
+   //    options.AppSecret = FBAuthNSection["AppSecret"];
+   //});
 
 
 
