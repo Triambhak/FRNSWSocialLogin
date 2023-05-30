@@ -96,30 +96,30 @@ namespace FRNSWSocialLogin.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult FbLogin()
-        {
-            var properties = new AuthenticationProperties
-            {
-                RedirectUri = Url.Action("FacebookResponse")
-            };
+        //public IActionResult FbLogin()
+        //{
+        //    var properties = new AuthenticationProperties
+        //    {
+        //        RedirectUri = Url.Action("FacebookResponse")
+        //    };
 
-            return Challenge(properties, FacebookDefaults.AuthenticationScheme);
-        }
+        //    return Challenge(properties, FacebookDefaults.AuthenticationScheme);
+        //}
 
-        public async Task<IActionResult> FacebookResponse()
-        {
-            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            var claims = result.Principal.Identities.FirstOrDefault().Claims.Select(claim => new
-            {
-                claim.Issuer,
-                claim.OriginalIssuer,
-                claim.Type,
-                claim.Value
+        //public async Task<IActionResult> FacebookResponse()
+        //{
+        //    var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        //    var claims = result.Principal.Identities.FirstOrDefault().Claims.Select(claim => new
+        //    {
+        //        claim.Issuer,
+        //        claim.OriginalIssuer,
+        //        claim.Type,
+        //        claim.Value
 
-            });
-            return Json(claims);
+        //    });
+        //    return Json(claims);
 
-        }
+        //}
 
         //public async Task<IActionResult> Callback()
         //{

@@ -14,6 +14,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+
 builder.Services.AddAuthentication()
    .AddGoogle(options =>
    {
@@ -21,15 +23,20 @@ builder.Services.AddAuthentication()
        config.GetSection("Authentication:Google");
        options.ClientId = googleAuthNSection["ClientId"];
        options.ClientSecret = googleAuthNSection["ClientSecret"];
-   });
-   //.AddFacebook(options =>
-   //{
-   //    IConfigurationSection FBAuthNSection =
-   //    config.GetSection("Authentication:FB");
-   //    options.AppId = FBAuthNSection["AppId"];
-   //    options.AppSecret = FBAuthNSection["AppSecret"];
-   //});
+   })
+.AddFacebook(options =>
+{
+    IConfigurationSection FBAuthNSection =
+     config.GetSection("Authentication:Facebook");
+    options.AppId = FBAuthNSection["AppId"];
+    options.AppSecret = FBAuthNSection["AppSecret"];
+});
 
+//builder.Services.AddAuthentication().AddFacebook(options =>
+//{
+//    options.AppId = "583861463834147";
+//    options.AppSecret = "ffd8c870b2b49cc39e3a801d733eaae6";
+//});
 
 
 var app = builder.Build();
